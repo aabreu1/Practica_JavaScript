@@ -4,24 +4,52 @@
 <title>Demostracion Bucle</title><!-- CABEZERA-->
 	
 </head>
+
 <body>
 	<script language="JavaScript">
-	var numero = 10;
-	var suma = 0;
-	for (var i = 0; i < 0; i++) {
-		suma += i;
-		i++;
-	}
-
-
-	while (i<=numero){
-
-	}
-
-	do{
-		
-	}while(i<=numero)
 	
+	cliente ="";	
+	do{
+		check=false;
+		cliente = prompt("Por favor permitanos saber su nombre");
+		if(cliente == ""){
+				alert("no ingreso ningun nombre");
+			}
+		else{	for (var i = 0; i <= cliente.length; i++) {
+				letra = cliente.substring(i,i+1);
+				document.write(letra);
+				switch(letra){
+					case '1': check = true; break;
+					case '2': check = true; break;
+					case '3': check = true; break;
+					case '4': check = true; break;
+					case '5': check = true; break;
+					case '6': check = true; break;
+					case '7': check = true; break;
+					case '8': check = true; break;
+					case '9': check = true; break;
+					case '0': check = true; break;
+					}
+				}
+			}		
+		if(check == true) {
+			alert("Disculpe no se puede ingresar numeros para  los nombres");
+		}
+	}while(check==true);
+	
+	var check = false;	
+
+	while(check==false){
+		check = true;
+		var edad = prompt("Por favor ingrese su edad");
+	   
+		if (edad < 10 || edad > 110){
+					alert ("la edad debe estar comprendida entre 10 y 110 annos");
+					check = false;
+				}
+
+		}//while
+
 	</script>
 </body>
 </html>
